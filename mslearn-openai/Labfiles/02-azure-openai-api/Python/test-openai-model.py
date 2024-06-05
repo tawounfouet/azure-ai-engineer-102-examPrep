@@ -13,6 +13,7 @@ def main():
         azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
         azure_oai_key = os.getenv("AZURE_OAI_KEY")
         azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+
         
         # Initialize the Azure OpenAI client...
         client = AzureOpenAI(
@@ -27,6 +28,8 @@ def main():
             I will then provide three suggestions for nearby run that vary in length. 
             I will also share an interesting fact about the local nature on the running when making a recommendation.
             """
+         # Initialize messages array
+        messages_array = [{"role": "system", "content": system_message}]
                 
 
 
@@ -43,25 +46,25 @@ def main():
             
             # Add code to send request...
             # Send request to Azure OpenAI model
-            response = client.chat.completions.create(
-                model=azure_oai_deployment,
-                temperature=0.7,
-                max_tokens=400,
-                messages=[
-                    {"role": "system", "content": system_message},
-                    {"role": "user", "content": input_text}
-                ]
-            )
-            generated_text = response.choices[0].message.content
-
-            # Print the response
-            print("Response: " + generated_text + "\n")
-                        
             
+            
+             # Send request to Azure OpenAI model
+            messages_array.append({"role": "user", "content": input_text})
+            
+            response = client.chat.completions.create(
+                 model=azure_oai_deployment,
+                 temperature=0.7,
+                 max_tokens=1200,
+                 messages=messages_array
+             )
+            generated_text = response.choices[0].message.content
+             # Add generated text to messages array
+            messages_array.append({"role": "assistant", "content": generated_text})
+            
+             # Print generated text
+            print("Summary: " + generated_text + "\n")
+                        
             
 
     except Exception as ex:
         print(ex)
-
-if __name__ == '__main__': 
-    main()
