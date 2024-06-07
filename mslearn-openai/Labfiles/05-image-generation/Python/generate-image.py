@@ -24,9 +24,12 @@ def main():
             "size": "1024x1024"
         }
         response = requests.post(url, headers=headers, json=body)
+        print(f"Response: {response}")
+        
 
         # Get the revised prompt and image URL from the response
         revised_prompt = response.json()['data'][0]['revised_prompt']
+        print(f"Revised prompt: {revised_prompt}")
         image_url = response.json()['data'][0]['url']
 
         # Display the URL for the generated image
