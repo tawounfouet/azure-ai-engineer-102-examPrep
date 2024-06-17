@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a50028d33b8b41bc8a073ee45bb24a93/artifacts
+end_time: 1718608006012
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a50028d33b8b41bc8a073ee45bb24a93
+run_name: legendary-wolf-593
+run_uuid: a50028d33b8b41bc8a073ee45bb24a93
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718608005769
+status: 3
+tags: []
+user_id: awf

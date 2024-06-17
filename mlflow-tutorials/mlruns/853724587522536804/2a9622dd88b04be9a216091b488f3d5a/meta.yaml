@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/853724587522536804/2a9622dd88b04be9a216091b488f3d5a/artifacts
+end_time: 1718608383236
+entry_point_name: ''
+experiment_id: '853724587522536804'
+lifecycle_stage: active
+run_id: 2a9622dd88b04be9a216091b488f3d5a
+run_name: spiffy-boar-793
+run_uuid: 2a9622dd88b04be9a216091b488f3d5a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718608383197
+status: 3
+tags: []
+user_id: awf

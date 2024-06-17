@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/947503533343020435/da578f4fba064a0bbb8a93dec3c15f4d/artifacts
+end_time: 1718606733701
+entry_point_name: ''
+experiment_id: '947503533343020435'
+lifecycle_stage: active
+run_id: da578f4fba064a0bbb8a93dec3c15f4d
+run_name: abundant-robin-178
+run_uuid: da578f4fba064a0bbb8a93dec3c15f4d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718606728536
+status: 3
+tags: []
+user_id: awf

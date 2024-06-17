@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/848777398996416587/2775d606f3a84ff2a0847c48a33ec486/artifacts
+end_time: 1718609434366
+entry_point_name: ''
+experiment_id: '848777398996416587'
+lifecycle_stage: active
+run_id: 2775d606f3a84ff2a0847c48a33ec486
+run_name: abrasive-cow-739
+run_uuid: 2775d606f3a84ff2a0847c48a33ec486
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718609429321
+status: 3
+tags: []
+user_id: awf

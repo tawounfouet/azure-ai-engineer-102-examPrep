@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/62be85399956449fae902df71facb612/artifacts
+end_time: 1718609320832
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 62be85399956449fae902df71facb612
+run_name: kindly-bug-776
+run_uuid: 62be85399956449fae902df71facb612
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718609316017
+status: 4
+tags: []
+user_id: awf

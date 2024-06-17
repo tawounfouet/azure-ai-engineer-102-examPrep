@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/795809717150578937/1dfd3e5c7a0546c2a30b5f5306f35a43/artifacts
+deleted_time: 1718608373677
+end_time: 1718608298902
+entry_point_name: ''
+experiment_id: '795809717150578937'
+lifecycle_stage: deleted
+run_id: 1dfd3e5c7a0546c2a30b5f5306f35a43
+run_name: unique-elk-749
+run_uuid: 1dfd3e5c7a0546c2a30b5f5306f35a43
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718608298861
+status: 3
+tags: []
+user_id: awf

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/947503533343020435/8c6d1f1ea0b74a7cb5540208cc943304/artifacts
+end_time: 1718606881342
+entry_point_name: ''
+experiment_id: '947503533343020435'
+lifecycle_stage: active
+run_id: 8c6d1f1ea0b74a7cb5540208cc943304
+run_name: grandiose-auk-177
+run_uuid: 8c6d1f1ea0b74a7cb5540208cc943304
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718606877279
+status: 3
+tags: []
+user_id: awf
