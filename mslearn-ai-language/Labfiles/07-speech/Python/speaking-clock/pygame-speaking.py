@@ -1,13 +1,11 @@
 from dotenv import load_dotenv
 from datetime import datetime
-from playsound import playsound
+import pygame
 import os
 
-# pip install pyobjc
-
 # Import namespaces
- # Import namespaces
 import azure.cognitiveservices.speech as speech_sdk
+
 
 def main():
     try:
@@ -15,39 +13,41 @@ def main():
 
         # Get Configuration Settings
         load_dotenv()
-        ai_key = os.getenv('SPEECH_KEY')
-        ai_region = os.getenv('SPEECH_REGION')
+        ai_key = os.getenv("SPEECH_KEY")
+        ai_region = os.getenv("SPEECH_REGION")
 
         # Configure speech service
-        # Configure speech service
         speech_config = speech_sdk.SpeechConfig(ai_key, ai_region)
-        print('Ready to use speech service in:', speech_config.region)
+        print("Ready to use speech service in:", speech_config.region)
 
         # Get spoken input
         command = TranscribeCommand()
-        if command.lower() == 'what time is it?':
+        if command.lower() == "what time is it? I want to go to the gym":
             TellTime()
 
     except Exception as ex:
         print(ex)
 
-def TranscribeCommand():
-    command = ''
 
-    # Configure speech recognition
-    # Configure speech recognition
-    #audio_config = speech_sdk.AudioConfig(use_default_microphone=True)
-    #speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
-    
+def TranscribeCommand():
+    command = ""
+
     # Configure speech recognition
     current_dir = os.getcwd()
-    audioFile = current_dir + '\\time.wav'
-    playsound(audioFile)
+    audioFile = os.path.join(current_dir, "time.wav")
+
+    # Initialize pygame mixer
+    pygame.mixer.init()
+    pygame.mixer.music.load(audioFile)
+    pygame.mixer.music.play()
+
+    while pygame.mixer.music.get_busy():
+        continue
+
     audio_config = speech_sdk.AudioConfig(filename=audioFile)
     speech_recognizer = speech_sdk.SpeechRecognizer(speech_config, audio_config)
-    print('Speak now...')
+    print("Speak now...")
 
-    # Process speech input
     # Process speech input
     speech = speech_recognizer.recognize_once_async().get()
     if speech.reason == speech_sdk.ResultReason.RecognizedSpeech:
@@ -60,23 +60,20 @@ def TranscribeCommand():
             print(cancellation.reason)
             print(cancellation.error_details)
 
-
     # Return the command
     return command
 
 
 def TellTime():
     now = datetime.now()
-    response_text = 'The time is {}:{:02d}'.format(now.hour,now.minute)
-
+    response_text = "The time is {}:{:02d}".format(now.hour, now.minute)
 
     # Configure speech synthesis
-    # Configure speech synthesis
-    speech_config.speech_synthesis_voice_name = "en-GB-RyanNeural"
+    #speech_config.speech_synthesis_voice_name = "en-GB-RyanNeural"
+    speech_config.speech_synthesis_voice_name = 'en-GB-LibbyNeural' # change this
+
     speech_synthesizer = speech_sdk.SpeechSynthesizer(speech_config)
-    
 
-    # Synthesize spoken output
     # Synthesize spoken output
     speak = speech_synthesizer.speak_text_async(response_text).get()
     if speak.reason != speech_sdk.ResultReason.SynthesizingAudioCompleted:
