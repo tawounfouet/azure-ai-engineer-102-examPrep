@@ -6,3 +6,5 @@
 resources/
 
 .env
+
+huggingface/courses/directory_on_my_computer/tf_model.h5
