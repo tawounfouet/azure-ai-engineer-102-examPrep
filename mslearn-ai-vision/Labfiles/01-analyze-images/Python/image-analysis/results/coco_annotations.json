@@ -1,0 +1,71 @@
+{
+    "info": {
+        "description": "COCO Dataset",
+        "url": "http://cocodataset.org",
+        "version": "1.0",
+        "year": 2024,
+        "contributor": "",
+        "date_created": "2024/06/18"
+    },
+    "licenses": [
+        {
+            "id": 1,
+            "name": "Unknown",
+            "url": "http://example.com/license"
+        }
+    ],
+    "images": [
+        {
+            "id": 1,
+            "width": 800,
+            "height": 533,
+            "file_name": "person.jpg",
+            "license": 1,
+            "flickr_url": "",
+            "coco_url": "",
+            "date_captured": "2024-06-18 17:36:56"
+        }
+    ],
+    "annotations": [
+        {
+            "id": 1,
+            "image_id": 1,
+            "category_id": 1,
+            "bbox": [
+                100,
+                150,
+                50,
+                50
+            ],
+            "area": 2500,
+            "segmentation": [],
+            "iscrowd": 0
+        },
+        {
+            "id": 2,
+            "image_id": 1,
+            "category_id": 2,
+            "bbox": [
+                200,
+                250,
+                75,
+                75
+            ],
+            "area": 5625,
+            "segmentation": [],
+            "iscrowd": 0
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "cat",
+            "supercategory": "none"
+        },
+        {
+            "id": 2,
+            "name": "dog",
+            "supercategory": "none"
+        }
+    ]
+}

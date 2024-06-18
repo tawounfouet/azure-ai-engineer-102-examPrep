@@ -3,8 +3,16 @@ import os
 from PIL import Image, ImageDraw
 import sys
 from matplotlib import pyplot as plt
-from azure.cognitiveservices.vision.computervision import ComputerVisionClient
-from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes
+
+ # import namespaces
+from azure.ai.vision.imageanalysis import ImageAnalysisClient
+from azure.ai.vision.imageanalysis.models import VisualFeatures
+from azure.core.credentials import AzureKeyCredential
+
+
+#from azure.cognitiveservices.vision.computervision import ComputerVisionClient
+#from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes
+
 from msrest.authentication import CognitiveServicesCredentials
 from msrest.exceptions import HttpOperationError
 import requests

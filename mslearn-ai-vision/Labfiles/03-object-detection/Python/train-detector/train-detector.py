@@ -70,3 +70,5 @@ def Upload_Images(folder):
 
 if __name__ == "__main__":
     main()
+
+# pip install azure-cognitiveservices-vision-customvision
