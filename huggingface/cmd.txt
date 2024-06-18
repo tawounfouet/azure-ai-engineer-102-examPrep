@@ -1,0 +1,10 @@
+
+tree 
+
+huggingface-cli login 
+
+huggingface-cli whoami
+
+huggingface-cli logout -help
+
+huggingface-cli repo
