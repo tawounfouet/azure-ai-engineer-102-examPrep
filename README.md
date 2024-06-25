@@ -4,10 +4,7 @@ Les ingénieurs en intelligence artificielle (IA) sont responsables du `dévelop
 
 https://learn.microsoft.com/fr-fr/plans/odgoumq07e4x83 
 
-
-Résultats d’apprentissage
-* Être en m`
-
+Résultats d’apprentissage, être en mesure de : 
 1.  Planifier et gérer une solution Azure AI, 
 2. Implémenter des solutions de support décisionnel
 3. Implémenter des solutions de vision par ordinateur
